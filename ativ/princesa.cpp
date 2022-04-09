@@ -4,8 +4,8 @@
 
 int main(){
 
-    std::vector<int> vetor{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    std::cout << "Declare o primeiro guerreiro" << std::endl;
+    std::vector<int> vetor = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::cout << "Declare a posição do primeiro guerreiro" << std::endl;
 
     int x{};
     std::cin >> x;
@@ -17,17 +17,17 @@ int main(){
         }
 
         x++;
-        if((unsigned)x == vetor.size()) {
+        if(x == (int)vetor.size()) {
             x = 0;
         }
 
-        for(int i = 0; (unsigned)i < vetor.size(); i++) {
+        for(int i = 0; i < (int)vetor.size(); i++) {
             std::cout << vetor[i] << " ";
         }
 
         vetor.erase(vetor.begin() + x);
 
-        if((unsigned)x == vetor.size()) {
+        if(x == (int)vetor.size()) {
             x = 0;
         }
 
